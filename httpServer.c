@@ -25,7 +25,7 @@ int main(int argc,char **argv)
     event_init();
         // 启动http服务
     httpserv = evhttp_start(addr,port);
-
+    printf("Server started on port %d\n",port);
     // 设置回调
     evhttp_set_gencb(httpserv, reqHandler,NULL);
     printf("Server started on port %d\n",port);
